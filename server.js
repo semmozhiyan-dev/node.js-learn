@@ -1,6 +1,28 @@
-let http = require('http');
-http.createServer(function(req,res){
-    res.writeHead(200,{'content-Type':'text/html'});
-    res.end('Hello World');
 
-}).listen(8080);
+console.log(global);
+const os =require("os")
+const path = require("path");
+const math = require('./math');
+
+console.log(os.type())
+console.log(os.version())
+console.log(os.homedir())
+
+console.log(__dirname)
+console.log(__filename)
+
+//node.js-learn
+console.log(path.dirname(__filename))
+//returns app.js
+console.log(path.basename(__filename))
+//.js
+console.log(path.extname(__filename))
+
+console.log(path.parse(__filename))
+
+//arithematic
+console.log(math.add(2,3))
+console.log(math.subtract(2,3))
+console.log(math.multiply(2,3))
+console.log(math.mod(2,3))
+console.log(math.divide(2,3))
