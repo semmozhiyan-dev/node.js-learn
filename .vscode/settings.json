@@ -1,5 +1,9 @@
 {
     "terminal.integrated.fontWeight": "bold",
     "terminal.integrated.tabs.defaultColor": "terminal.ansiBlack",
-    "terminal.integrated.tabs.defaultIcon": "console"
+    "terminal.integrated.tabs.defaultIcon": "console",
+    "sonarlint.connectedMode.project": {
+        "connectionId": "my sonarqube connection",
+        "projectKey": "semmozhiyan-dev_node.js-learn"
+    }
 }
