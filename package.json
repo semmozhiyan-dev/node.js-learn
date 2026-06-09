@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/semmozhiyan-dev/node.js-learn/issues"
   },
-  "homepage": "https://github.com/semmozhiyan-dev/node.js-learn#readme"
+  "homepage": "https://github.com/semmozhiyan-dev/node.js-learn#readme",
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
 }
