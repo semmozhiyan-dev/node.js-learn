@@ -1,30 +1,27 @@
-const amount = 12
-if(amount <10){
-    console.log('small number')
-}
-else{
-    console.log('large number')
-}
-console.log('its my first node problem')
-//while loop
-let i=0;
-while(i<5){
-    console.log(i);
-    i++;
-}
-//call function
-function greet(){
-    console.log("hello");
-}
-greet();
-//parameters
-function greet(name){
-    console.log("hello" +name);   
+//express
+const exp = require('express');
 
-}
-greet("sem");
-//return
-function add(a,b=6){
+const app =exp();
 
-    return a+b;
-} 
+app .listen(3000);
+
+app.get('/',(req,res)=>{
+    res.sendFile('./docs/index.html', {root: __dirname});
+
+})
+app.get('/about',(req,res)=>{
+        res.sendFile('./docs/about.html', {root: __dirname});
+})
+
+app.get('/join',(req,res)=>{
+        res.sendFile('./docs/join.html', {root: __dirname});
+})
+
+//to redirect to another page 
+app.get('/joinus',(req,res)=>{
+    res.redirect('/join');
+})
+//app.use is a middleware 
+app.use((req,res)=>{
+    res.sendFile('./docs/notfound.html',{root: __dirname});
+})
