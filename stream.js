@@ -9,3 +9,8 @@ const writeStream =fs.createWriteStream('./docs/copyHugeFile.txt');
     //writeStream.write(buffer);
 //});
 readStream.pipe(writeStream);
+
+
+
+
+
