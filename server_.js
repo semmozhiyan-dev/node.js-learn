@@ -22,6 +22,10 @@ const server=http.createServer((req,res)=>{
     else if(req.url  == '/about'){
         path+='about.html';
     }
+    else{
+        path+='notfound.html';
+        res.statusCode=404;
+    }
 
     fs.readFile(path,(err,data)=>{
         if(err){
