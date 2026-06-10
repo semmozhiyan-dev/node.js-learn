@@ -1,9 +1,25 @@
 //express
 const exp = require('express');
-
+const morgan = require('morgan');
 const app =exp();
 
-app .listen(3000);
+app.listen(3000);
+
+app.use(morgan('dev'));
+
+//middleware
+//app.use((req,res,next)=>{
+    //console.log('request received 1');
+    //console.log(req.host);
+    //console.log(req.path);
+    //console.log(req.method);
+    //next();// this is used to execute next middleware
+//})
+
+//app.use((req,res,next)=>{
+    //console.log('request received 2');
+    //next();
+//})
 
 app.get('/',(req,res)=>{
     res.sendFile('./docs/index.html', {root: __dirname});
@@ -25,3 +41,7 @@ app.get('/joinus',(req,res)=>{
 app.use((req,res)=>{
     res.sendFile('./docs/notfound.html',{root: __dirname});
 })
+
+
+// define middleware
+//browser -> request-> server(middleware)-> response-> browser
